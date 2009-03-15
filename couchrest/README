@@ -1,0 +1,11 @@
+= couch example wiki - couchrest implementation =
+
+(requires couchdb trunk, couchrest trunk as of 2009-03-15)
+
+* creating page objects is easy via a page class that extends CouchRest::ExtendedDocuments
+* versioning is easy: using a simple after_update hook that creates a copy of the old version on save
+* word statistics are dead simple - a view with a map function that emits all the words and a reduce function to group them by word
+* list of pages - load all page objects and show just title - could be improved by a special view that simply returns the titles
+
+* improvements:
+** automatic creation/updating of views like couchrest already does for its own views
