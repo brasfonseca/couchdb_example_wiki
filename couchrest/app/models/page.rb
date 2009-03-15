@@ -18,7 +18,7 @@ class Page < CouchRest::ExtendedDocument
   validates_present :title, :body
   
   def versions
-    PageVersion.by_version_and_page_id :startkey => [1, self.id], :endkey => [1, self.id]
+    PageVersion.by_version_and_page_id :startkey => [1, self.id], :endkey => [9999999999, self.id]
   end
   
   def errors
