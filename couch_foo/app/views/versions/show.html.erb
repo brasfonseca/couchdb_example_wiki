@@ -1,0 +1,5 @@
+<h1><%= @page.title %> (Version <%= @version.version %>)</h1>
+
+<%= link_to 'most recent version', page_path(@page.title) %>
+
+<%= simple_format linkify(@version.body) %>

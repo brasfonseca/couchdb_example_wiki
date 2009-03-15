@@ -1,0 +1,10 @@
+= couch example wiki - couch_foo implementation =
+
+(probably requires couchdb trunk, couchrest trunk as of 2009-03-15)
+
+couch_foo HAS NOT TESTS WTF - cancelled
+
+
+* built-in dirty tracking - handy for versions
+* built-in associations, nice for simple associations
+* no access to built-in view infrastructure (automatically create views) - the idea of having views that don't return domain objects is completely absent

@@ -1,0 +1,7 @@
+<h1>Statistics - word counts</h1>
+
+<ul>
+  <%- @word_counts.each do |word, count| -%>
+    <li><%= h word %>: <%= count %></li>
+  <%- end -%>
+</ul>
