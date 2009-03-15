@@ -1,0 +1,6 @@
+= couch example wiki - activerecord/mysql implementation =
+
+* creating page objects is easy via simple activerecord classes
+* versioning is hard, requires plugin with extra table and some code kung fu
+* word statistics are hard - almost impossible with a sql database (?) - done in plain ruby
+* list of pages - load all page objects and show just title

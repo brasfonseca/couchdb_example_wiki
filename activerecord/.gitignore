@@ -1,0 +1,6 @@
+*.log
+schema.rb
+*.pid
+tmp/*
+log/*
+

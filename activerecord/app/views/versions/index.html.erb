@@ -1,0 +1,7 @@
+<h1><%= @versions.count %> Versions for &quot;<%= h @page.title %>&quot;</h1>
+
+<ul>
+  <%- @versions.each do |version| -%>
+    <li><%= link_to "Version #{version.version}", page_version_path(@page, version.version) %></li>
+  <%- end -%>
+</ul>
