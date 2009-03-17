@@ -10,7 +10,9 @@ class PageVersion < CouchRest::ExtendedDocument
   timestamps!
   
   view_by :page_id
-  view_by :version, :page_id
+  view_by :version, :page_id, :map => "function(doc) {if(doc['couchrest-type'] == 'PageVersion') {emit([doc.version, doc.page_id], 1)}}", :reduce => "function(key, combine) {
+    return sum(combine);
+  }"
   
   
   validates_present :body, :page_id, :version
