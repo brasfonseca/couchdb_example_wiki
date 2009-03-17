@@ -1,6 +1,6 @@
 *.log
 schema.rb
 *.pid
-tmp/*
-log/*
+**/tmp/*
+**/log/*
 
