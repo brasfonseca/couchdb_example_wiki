@@ -10,7 +10,7 @@ class WordCount < CouchRest::ExtendedDocument
       });
     }
   }",
-  :reduce => "function(key, combine) {
-    return sum(combine);
+  :reduce => "function(keys, values) {
+    return sum(values);
   }"
 end
