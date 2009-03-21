@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Wiki</title>
+  </head>
+  <body>
+    <div id="navigation">
+      <ul>
+        <li><%= link_to 'List of Pages', pages_path %></li>
+        <li><%= link_to 'Statistics', statistics_path %></li>
+      </ul>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+  </body>
+</html>
