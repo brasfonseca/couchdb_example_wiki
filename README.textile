@@ -14,6 +14,6 @@ maybe later: (if i have the tim)
  
 you can find my comments on each framework in the README of each application root directory.
 
-h2. runnin the apps
+h2. running the apps
 
 all of the apps (except couchapp) are rails 2.3.1 apps so you need rails. for the activerecord reference implementation you need mysql. for all the couchdb apps you need the latest couchdb from svn trunk. to run the cucumber features you need culerity (which in turn requires jruby).
