@@ -1,0 +1,13 @@
+= couch example wiki - activecouch implementation =
+
+* patched to work with latest couchdb trunk (new url schema for querying views)
+
+* one database per model?! - simulating tables?
+* find_from_url to access custom views
+* no automatic view creation for simple views like all, by_title
+* separate class for views (ActiveCouch::View) - store views to couch via rake tasks
+  * view name is derived from view class name and has to match a convention so that Page.find :all can use it - feels weird
+  * not usable for custom views -> no support for maintaining custom views at all
+  * can not search without providing a key since view name is derived from passed in search params, e.g. Page.all impossible, only via view_from_url
+* no validations - using validatable gem instead
+* creates all accessors etc. ob object creation instead of the class - makes things like dirty_tracking harder. why?

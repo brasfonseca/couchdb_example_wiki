@@ -1,0 +1,6 @@
+<li><%= link_to 'Edit Page', edit_page_path(@page.title) %></li>
+<li><%= link_to 'Versions', page_versions_path(@page.title) %></li>
+
+<h1><%= h @page.title %></h1>
+
+<%= simple_format linkify(@page.body) %>

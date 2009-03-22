@@ -1,0 +1,4 @@
+test:
+  site: http://localhost:5984/
+development:
+  site: http://localhost:5984/
