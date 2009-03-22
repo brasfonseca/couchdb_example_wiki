@@ -3,5 +3,6 @@
 (patched to work with couchdb trunk new url schema for querying views)
 
 * has low level API like couchrest to access documents/views
-* very low level document object - no properties, no validations, no view creation
+* very low level document object - no properties, no validations, no view creation, no update
+* the couchrest api seems more mature
 
