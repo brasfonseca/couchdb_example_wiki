@@ -1,0 +1,4 @@
+- Expand on View class
+- Do dot notation for document attributes in Database#filter
+
+- CouchObject::Model for more domain specific/clearer way to model Couch docs in ruby

@@ -1,0 +1,37 @@
+h1. CouchObject
+
+h1. &#x2192; 'couch_object'
+
+
+h2. What
+
+CouchObject is a set of classes to help you talk to "CouchDb":http://couchdbwiki.com/ with and in Ruby.
+
+h2. Installing
+
+<pre syntax="ruby">sudo gem install couchobject</pre>
+
+h2. The basics
+
+
+h2. Demonstration of usage
+
+See the "RDoc":http://couchobject.rubyforge.org/rdoc/
+
+h2. How to submit patches
+
+<pre>
+  $ git clone git://repo.or.cz/couchobject.git
+</pre>
+
+h2. License
+
+This code is free to use under the terms of the MIT license. 
+
+h2. Contact
+
+* Author: Johan Sørensen
+* Contact: johan (at) johansorensen DOT com
+* Home: "Rubyforge":http://rubyforge.org/projects/couchobject/ | "Rubyforge hme":http://couchobject.rubyforge.org
+* Source (Git): "http://repo.or.cz/w/couchobject.git":http://repo.or.cz/w/couchobject.git
+

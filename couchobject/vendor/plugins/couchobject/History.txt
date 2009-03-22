@@ -1,0 +1,14 @@
+== 0.5.0 2007-09-15
+
+* 1 major enhancement:
+  * Database.filter{|doc| } for filtering the on doc, in Ruby!
+  * couch_ruby_view_requestor, a JsServer client for CouchDb allowing you to query in Ruby
+  
+* 1 minor enhancement:
+  * Added Database#store(document), the parallel of Document#save(database)
+
+
+== 0.0.1 2007-09-13
+
+* 1 major enhancement:
+  * Initial release
