@@ -2,9 +2,8 @@
 
 (single_design_doc branch with patches to work with latest couchdb trunk (new _design/_view url schema))
 
-* very basic associations (no assoc.create(attributes) for example)
-* no way to load a single doc by id?!
-* little support for custom views via RelaxDB::View (see word_count.rb)
+* basic associations - intended
+* little support for custom views via RelaxDB::View (see word_count.rb) and ViewUploader
 * supports couchdb like view queries instead of hiding behind AR like API
 * non-rails errors require extra handling for views
 * no ad-hoc view creation makes testing a bit harder - new views are not created automatically but only after class reloading
