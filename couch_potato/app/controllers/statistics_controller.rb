@@ -1,5 +1,5 @@
 class StatisticsController < ApplicationController
   def index
-    @word_counts = Page.word_counts
+    @word_counts = db.view Page.word_counts
   end
 end

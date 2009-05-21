@@ -1,16 +1,13 @@
-Before do
-  Page.db.delete! rescue nil
-  Page.db.create!
-end
-
 Given /^a page "([^"]+)" with the body "([^"]+)"$/ do |title, body|
-  Page.new(:title => title, :body => body).save!
+  DB.save! Page.new(:title => title, :body => body)
 end
 
 Given /^"([^"]+)" has been updated with "([^"]+)"$/ do |title, body|
-  Page.first(:title => title).update_attributes :body => body
+  page = DB.view(Page.by_title(:key => title)).first
+  page.attributes = {:body => body}
+  DB.save! page
 end
 
 Given /^a page "([^"]+)"$/ do |title|
-  Page.new(:title => title, :body => 'body').save!
+  DB.save! Page.new(:title => title, :body => 'body')
 end

@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   
   def index
-    @pages = Page.all.sort_by(&:created_at)
+    @pages = db.view Page.by_created_at
   end
   
   def new
@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   
   def create
     @page = Page.new params[:page]
-    if @page.save
+    if db.save @page
       redirect_to page_path(:id => @page.title)
     else
       render :new
@@ -23,7 +23,8 @@ class PagesController < ApplicationController
   
   def update
     @page = load_page!
-    if @page.update_attributes params[:page]
+    @page.attributes = params[:page]
+    if db.save @page
       redirect_to page_path(@page.title)
     else
       render :edit
@@ -31,7 +32,7 @@ class PagesController < ApplicationController
   end
   
   def show
-    @page = Page.all.sort_by(&:created_at).first unless params[:id]
+    @page = db.view(Page.by_created_at(:limit => 1)).first unless params[:id]
     @page ||= load_page
     redirect_to new_page_path(:title => params[:id]) unless @page
   end

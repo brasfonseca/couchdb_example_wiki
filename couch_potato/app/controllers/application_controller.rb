@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
   
   def load_page(title = nil)
-    Page.first :title => (title || params[:id])
+    db.view(Page.by_title(:key => title || params[:id])).first
   end
   
   def load_page!(title = nil)
@@ -16,5 +16,11 @@ class ApplicationController < ActionController::Base
   
   def not_found
     raise :not_found
+  end
+  
+  private
+  
+  def db
+    CouchPotato.database
   end
 end
