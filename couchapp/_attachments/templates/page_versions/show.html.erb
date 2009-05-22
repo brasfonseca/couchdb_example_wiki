@@ -1,0 +1,10 @@
+<h2>Version: <%= page_version.created_at %></h2>
+
+<ul id="subnav">
+  <li><a href="#/pages/<%= page._id %>/versions">All Versions</a></li>
+  <li><a href="#/pages/<%= page._id %>">Current Version</a></li>
+</ul>
+
+<div id="page">
+  <p><%= page_version.body %></p>
+</div>

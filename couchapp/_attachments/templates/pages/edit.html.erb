@@ -1,10 +1,6 @@
-<h2><%= page.title %></h2>
+<h2><%= page._id %></h2>
 
-<form action="#/pages/<%= page._id %>" method="post">
-  <input type="hidden" name="_rev" value="<%= page._rev %>"/>
-  <label for="title">Title</label>
-  <p><input type="text" name="title" id="title" value="<%= page.title %>"/></p>
-  <label for="body">Body</label>
-  <p><textarea name="body" id="body"><%= page.body %></textarea></p>
+<form action="#/pages/<%= page._id %>" method="put">
+  <p><textarea name="body" id="body" rows="20" cols="80"><%= page.body %></textarea></p>
   <p><input type="submit" value="Update Page"/></p>
 </form>

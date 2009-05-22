@@ -1,5 +1,10 @@
-<h2><%= page.title %></h2>
+<h2><%= page._id %></h2>
 
-<p><a href="#/pages/edit/<%= page._id %>">edit</a></p>
+<ul id="subnav">
+  <li><a href="#/pages/<%= page._id %>/edit">edit</a></li>
+  <li><a href="#/pages/<%= page._id %>/versions">versions</a></li>
+</ul>
 
-<p><%= page.body %></p>
+<div id="page">
+  <p><%= page.body.replace(/([A-Z][a-z]+([A-Z][a-z]+)+)/g, function(match) {return "<a href=\"#/pages/" + match + "\">" + match + "</a>"}) %></p>
+</div>

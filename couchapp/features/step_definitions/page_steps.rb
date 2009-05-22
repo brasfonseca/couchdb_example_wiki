@@ -1,5 +1,5 @@
 require 'rubygems'
-gem 'jchris-couchrest'
+gem 'couchrest'
 require 'couchrest'
 
 Before do

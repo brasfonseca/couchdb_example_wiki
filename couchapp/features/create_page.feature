@@ -6,6 +6,7 @@ Feature: wiki
   
   Scenario: create first page
     When I go to the start page
+    And I wait for the AJAX call to finish
     And I fill in "Page One" for "Title"
     And I fill in "this is page one" for "Body"
     And I press "Create Page"

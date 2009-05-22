@@ -1,4 +1,7 @@
+require 'rubygems'
+gem 'langalex-culerity'
 require 'culerity'
+require 'tempfile'
 
 Before do
   $server ||= Culerity::run_server
@@ -108,6 +111,7 @@ def assert_successful_response
     tmp << $browser.html
     tmp.close
     `open -a /Applications/Safari.app #{tmp.path}`
+    sleep 1
     raise "Brower returned Response Code #{$browser.page.web_response.status_code}"
   end
 end

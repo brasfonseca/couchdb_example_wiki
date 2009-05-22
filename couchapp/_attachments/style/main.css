@@ -1,5 +1,14 @@
 /* add styles here */
 
+body {
+  font-family: Verdana;
+}
+
+h2 {
+  background-color: #CCC;
+  padding: 10px;
+}
+
 #error {
   display:none;
   background-color: rgb(255, 100, 80);
@@ -16,6 +25,12 @@
   margin: 10px;
 }
 
+#nav li {
+  display: inline-block;
+  background-color: #DDD;
+  padding: 5px;
+}
+
 table.grid {
   border-collapse: collapse;
 }
@@ -23,4 +38,27 @@ table.grid {
 table.grid td, table.grid th {
   border: 1px solid gray;
   padding: 10px;
+}
+
+#page {
+  background-color: #EEE;
+  padding: 20px;
+}
+
+#subnav {
+  padding: 5px;
+  background-color: #666;
+}
+
+#subnav li {
+  display: inline-block;
+  background-color: #888;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px;
+  padding-right: 20px;
+}
+
+#subnav li a {
+  color: white;
 }
