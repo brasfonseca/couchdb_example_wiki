@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Generated CouchApp</title>
+    <title>Wiki</title>
     <link rel="stylesheet" href="style/main.css" type="text/css">
   </head>
   <body>
-    <h1>Generated CouchApp</h1>
-    <ul id="view"></ul>
+    <h1>Wiki</h1>
+    <div id="nav">
+      <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/pages/new">New Page</a></li>
+        <li><a href="#/pages">All Pages</a></li>
+      </ul>
+    </div>
+    <div id="error"></div>
+    <div id="notice"></div>
+    <div id="content"></div>
   </body>
   <script src="/_utils/script/json2.js"></script>
-  <script src="/_utils/script/jquery.js?1.2.6"></script>
-  <script src="/_utils/script/jquery.couch.js?0.8.0"></script>
-  <script type="text/javascript" charset="utf-8">
-    $(function() {
-      var dbname = document.location.href.split('/')[3];
-      var design = unescape(document.location.href).split('/')[5];
-      var DB = $.couch.db(dbname);
-      DB.view(design+"/example",{success: function(json) {
-        $("#view").html(json.rows.map(function(row) {
-          return '<li>'+row.key+'</li>';
-        }).join(''));
-      }});
-    });
-  </script>
+  <script src="./jquery.js"></script>
+  <script src="/_utils/script/jquery.couch.js"></script>
+  <script src="./vendor/couchapp/jquery.couchapp.js"></script>
+  <script src="./vendor/sammy/sammy.js"></script>
+  <script src="./js/app.js"></script>
 </html>

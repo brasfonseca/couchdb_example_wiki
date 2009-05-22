@@ -1,1 +1,17 @@
 /* add styles here */
+
+#error {
+  display:none;
+  background-color: rgb(255, 100, 80);
+  max-width: 300px;
+  padding: 5px;
+  margin: 10px;
+}
+
+#notice {
+  display:none;
+  background-color: rgb(100, 255, 80);
+  max-width: 300px;
+  padding: 5px;
+  margin: 10px;
+}
